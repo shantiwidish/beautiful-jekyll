@@ -1,16 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: A virtual proof that I am awesome!
 ---
 
-My name is Inigo Montoya. I have the following qualities:
-
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Hello, my name is Shanti Widiyawati. I am working for Ministry of Trade as Computer Personnel. My daily tasks are not related to Computer Personnel's job. The tasks are more into processing employment data and financial data. Employment evaluation process, pension application process, and tax billing are something I have to manage. Currently, I pursue my bachelor degree at Informatics Engineering Esa Unggul University.
