@@ -28,6 +28,7 @@ Struktur SOAP terdiri dari element-element sebagai berikut :
 **Contoh Penggunaan SOAP**
 
 SOAP Request
+
 ~~~ xml
 POST /InStock HTTP/1.1
 Host: www.example.org
@@ -47,6 +48,7 @@ soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
 ~~~
 
 SOAP Response
+
 ~~~ xml
 HTTP/1.1 200 OK
 Content-Type: application/soap+xml; charset=utf-8
@@ -83,11 +85,16 @@ Sedangkan, kelemahan SOAP, yaitu :
 **Mekanisme**
 
 Berikut adalah gambaran dari implementasi SOAP
+
 ![SOAP](/img/soapdg001.gif)
+
 SOAP client akan mengirimkan SOAP Request melalui internet ( protocol http dapat diakses public melalui internet ) dan diterima oleh SOAP Server(machine) lalu di teruskan kepada SOAP Service untuk memproses request tersebut. Setelah pemrosesan selesai dilakukan SOAP Service akan memberikan SOAP Response kepada SOAP Client.
 
 
 **Referensi**
 
 https://www.w3schools.com/xml/xml_soap.asp
-Papazoglou, Michael P. Web Services, 1st Edition. 2008.  
+Papazoglou, Michael P. Web Services, 1st Edition. 2008.
+  
+https://docs.oracle.com/cd/A97335_02/integrate.102/a90297/overview.htm
+Oracle9i Application Server Oracle9iAS SOAP Developer's Guide
