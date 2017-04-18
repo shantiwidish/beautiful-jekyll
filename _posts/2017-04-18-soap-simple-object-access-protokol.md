@@ -2,9 +2,10 @@
 layout: post
 title: SOAP (SIMPLE OBJECT ACCESS PROTOKOL)
 bigimg: /img/false-soap.jpg
+subtitle: SOAP adalah standar protokol komunikasi untuk melakukan pertukaran pesan yang digunakan oleh Web Services
 tags: [submission,psbk]
 ---
-**Definisi**
+# Definisi
 
 SOAP adalah standar protokol komunikasi untuk melakukan pertukaran pesan yang digunakan oleh Web Services. SOAP menggunakan XML sebagai skema pengkodean untuk permintaan dan merespons parameter-parameter dari permintaan tersebut menggunakan HTTP.
 SOAP mencakup empat hal sebagai berikut, yaitu :
@@ -15,17 +16,18 @@ SOAP mencakup empat hal sebagai berikut, yaitu :
 * Sekumpulan konvensi tentang cara mengaktifkan panggilan RPC (Remote Procedure Call) menjadi pesan SOAP.
 
 
-**Struktur SOAP**
+# Struktur SOAP
 
 Struktur SOAP terdiri dari element-element sebagai berikut :
 
-1. Element <Envelope>  yang mengidentifikasi dokumen XML sebagai SOAP
-2. Element <Header> yang terdiri dari blok-blok informasi yang relevan dengan bagaimana pesan akan diproses (informasi header) dan bersifat opsional. 
-3. <Body> adalah elemen dimana informasi end to end yang utama yang disampaikan di SOAP harus dilakukan (informasi call dan response).
-4. <Fault> adalah informasi error yang terjadi dan bersifat opsional.
+* Element &lt;Envelope&gt; yang mengidentifikasi dokumen XML sebagai SOAP
+* Element &lt;Header&gt; yang terdiri dari blok-blok informasi yang relevan dengan bagaimana pesan akan diproses (informasi header) dan bersifat opsional. 
+* &lt;Body&gt; adalah elemen dimana informasi end to end yang utama yang disampaikan di SOAP harus dilakukan (informasi call dan response).
+* &lt;Fault&gt; adalah informasi error yang terjadi dan bersifat opsional.
+ 
 
+# Contoh Penggunaan SOAP
 
-**Contoh Penggunaan SOAP**
 
 SOAP Request
 
@@ -66,7 +68,7 @@ soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
 </soap:Envelope>
 ~~~
 
-**Kelebihan dan Kelemahan SOAP**
+# Kelebihan dan Kelemahan SOAP
 
 Kelebihan SOAP, yaitu :
 
@@ -82,7 +84,7 @@ Sedangkan, kelemahan SOAP, yaitu :
 3. Serilization by value and not by reference.
       
 
-**Mekanisme**
+# Mekanisme
 
 Berikut adalah gambaran dari implementasi SOAP
 
@@ -91,10 +93,10 @@ Berikut adalah gambaran dari implementasi SOAP
 SOAP client akan mengirimkan SOAP Request melalui internet ( protocol http dapat diakses public melalui internet ) dan diterima oleh SOAP Server(machine) lalu di teruskan kepada SOAP Service untuk memproses request tersebut. Setelah pemrosesan selesai dilakukan SOAP Service akan memberikan SOAP Response kepada SOAP Client.
 
 
-**Referensi**
+# Referensi
 
 https://www.w3schools.com/xml/xml_soap.asp
 Papazoglou, Michael P. Web Services, 1st Edition. 2008.
-  
+
 https://docs.oracle.com/cd/A97335_02/integrate.102/a90297/overview.htm
 Oracle9i Application Server Oracle9iAS SOAP Developer's Guide

@@ -25,7 +25,7 @@ description: A virtual proof that Shanti is awesome!
 navbar-links:
   About Me: "aboutme"
   Submissions:
-    - PSBK: "../psbk/"
+    - PSBK: "../2017/04/18/soap-simple-object-access-protokol/"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
