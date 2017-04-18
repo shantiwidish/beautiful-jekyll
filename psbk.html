@@ -1,0 +1,19 @@
+---
+layout: page
+title: PSBK Submission
+subtitle: Perancangan Sistem Berbasis Komponen
+use-site-title: true
+---
+
+{% for tag in page.tags %}
+  <h5 id="{{ tag }}-ref">{{ tag }}</h5>
+
+  {% for post in site.posts reversed %}
+
+    {% if post.tags contains tag %}
+      <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+    {% endif %}
+
+  {% endfor %}
+
+{% endfor %}
