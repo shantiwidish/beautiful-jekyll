@@ -1,0 +1,79 @@
+<html>
+  <body marginwidth="0" marginheight="0">
+    <script src="http://client.okezone.com/timesignal/contoh/pertama_files/howler.core.js"></script>
+    <script src="http://client.okezone.com/timesignal/contoh/pertama_files/core.webaudio3.js"></script>
+    <style>
+    .bgpcloop01{z-index: 9999999; display:none; position: fixed; width:100%; height:130%; }
+    .closepop01{position: absolute; height:20px; width:20px; background: url('https://cdn.okezone.com/underwood/ads/timesignal-adzan/close-ts.png') no-repeat; background-size: 100%; top: 0px; right: 0px; z-index: 99}
+    .closepop01:hover{background: url('https://cdn.okezone.com/underwood/ads/timesignal-adzan/close-ts.png') no-repeat; background-size: 100%;  display:block; opacity: 1;cursor: pointer;}
+    .popup01{display:none; left:0px; right:0px;   background-size: cover; background-position: center; z-index: 9999999; margin:0 auto; top:5%; position: fixed; width:300px; height:300px;}
+    .popup01 .btn{position: absolute; bottom: 0px; left:0px; width:100%; text-align: center; right:0px; margin: 0 auto  0px; }
+    .popup01 .btn img{border-radius: 4px; text-align: center; opacity: 1;}
+    .popup01 .btn img:hover{opacity: 0.8}
+    .bgblack01{display:none;  height: 100%; position: fixed; width:100%; z-index: 99}
+    .popup01.muncul{display: block}/*display:block*/
+    .bgpop01.muncul{display: block;}/*display:block*/
+    .popup01 a.target{display: block; position: absolute; z-index: 99999999; top:0px; left:0px; right:0px;height: 250px; width:100%}/*display:block*/
+    #adzantime {    position: absolute;top: 65px;left: 0;right: 0;margin: 0 auto;text-align: center;width: 200px; font-size: 56px; font-family: 'futura_md_btmedium','Helvetica Neue','Helvetica','Arial',sans-serif, 'calibri'; color: #747474; }
+    #mainkan{position: absolute; background: transparent; opacity: 0.5; width: 100%; height: 100%; z-index: 100; border: none;}
+    </style>
+
+    <div class="popup01 muncul img-responsive floating-popup">
+      <script src="https://cdn.okezone.com/www/2016/js/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdn.okezone.com/www/2016/css/fonts.css">
+      <!-- ADS Script -->
+
+      <!--Creative start here -->
+      <a id="adzan-link" target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvJhlYXudsz516g4DwoLq7eqvs4kOLIUB8unefEs3ZOnenOQZPw0ms9dag5smuHEehMfRwUYfp1pxlwqX4kiYw9svXN3ViIZeXfFylaVsDShcqaeu6H-B23P2SOSSyh0zZvvwN3WtMExOV1suz7HwUW74N7W--ob6B5ioCsDhBHPfcXCZjXOuqhWkTa1jBfJ4r52RKcrIDZZ-EjTfmnl5lfjYvGJF5hv0ZFFmgivjjkQKCDvKbZ&amp;sig=Cg0ArKJSzI4TvoPMaT1rEAE&amp;urlfix=1&amp;adurl=http://www.dikti.go.id">
+          <img src="https://cdn.okezone.com/underwood/ads/timesignal-adzan/mobile/m-subuh.png">
+      </a>
+      <!--Creative end here -->
+
+      <!-- ADS Script -->
+      <!-- <div class="closepop01" onclick="play()"></div> -->
+      <div class="closepop01"></div>
+      <span id="adzantime"></span>
+    </div>
+    <script src="https://cdn.okezone.com/underwood/js/jadwal-adzan.js"></script>
+    <script>
+    function stop(){
+        sound1.stop();
+    }
+      $(function() {
+        $('.closepop01').bind('click', function() {
+          $(parent.document).find('.floating-popup').remove();
+          stop();
+        });
+      });
+
+      var idx_shalat = 0;
+
+      function adzan() {
+        var date       = new Date();
+        var curr_date  = date.getDate();
+        var time_now   = Date.parse(date) / 1000;
+
+        if (typeof adzan_schedule[curr_date] != "undefined") {
+          for (var i = 0; i < adzan_schedule[curr_date].length; i++) {
+            var time_check = Date.parse(adzan_schedule[curr_date][i]) / 1000;
+
+            if (time_check <= time_now) {
+              idx_shalat = i;
+            }
+          }
+        }
+
+        var d      = new Date(adzan_schedule[curr_date][idx_shalat]);
+        var hour   = ('0' + d.getHours()).slice(-2);
+        var minute = ('0' + d.getMinutes()).slice(-2);
+
+        $('#adzan-link img').attr('src', adzan_mobile_image[idx_shalat]);
+
+        return hour + ':' + minute;
+      }
+
+      $('#adzantime').html(adzan());
+    </script>
+
+  </body>
+</html>
